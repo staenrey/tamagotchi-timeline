@@ -1,0 +1,1 @@
+An app for Bandai Tamagotchi collectors featuring a global Tamagotchi timeline.
