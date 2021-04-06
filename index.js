@@ -14,27 +14,12 @@ app.get("/", (req, res) => {
     res.render("home")
 })
 
-app.get("/todos", async (req, res) => {
-    let results = await db.any("SELECT * FROM todos;")
-    res.json(results)
+app.get("/timeline", (req, res) => {
+    res.render("timeline")
 })
 
-// to add todo items
-
-app.post("/todos", async (req, res) => {
-    const newTodoItem = await db.one("INSERT INTO todos (task, completed) VALUES ($1, $2) returning *;",
-        [req.body.task, false]
-    )
-    res.json(newTodoItem)
-})
-
-// to mark as completed
-
-app.post("/todos/:taskId/completed", async (req, res) => {
-    const updatedTodoItem = await db.one("UPDATE todos SET completed = $1 WHERE id = $2 returning *;",
-        [req.body.completed, req.params.taskId]
-    )
-    res.json(updatedTodoItem)
+app.get("/admin", (req, res) => {
+    res.render("admin")
 })
 
 PORT = 3000
