@@ -13,4 +13,3 @@ era: Vintage, Connection, Color, Nano, Mini, Other
 region: Japan, EU, USA, Oceania, Korea
 release: yyyy-mm-dd
 got_it: boolean, yes or no
-

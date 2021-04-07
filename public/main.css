@@ -31,15 +31,13 @@ h1 {
     text-shadow: 2px 2px 3px rgb(128, 87, 95);
 }
 
-.todo-list {
+.tama-list {
     list-style: none;
     padding: 0;
 }
 
-.add-task-group {
+.add-tama-group {
+    display: flex;
+    flex-direction: column;
     margin: 0 0 0 1.2rem; 
-}
-
-input:checked+.todo-text {
-    text-decoration: line-through;
 }

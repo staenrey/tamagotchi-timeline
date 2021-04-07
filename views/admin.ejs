@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +12,125 @@
 
 <body>
     <div class="main-wrapper">
-        <h1>Add Releases!
+        <h1>Manage Tama entries</h1>
 
+        <table class="tama-list">
+            <tr>
+                <th>Brand</th>
+                <th>Tama Name</th>
+                <th>Based On</th>
+                <th>Toy Type</th>
+
+                <th>Era</th>
+                <th>Region</th>
+                <th>Released on</th>
+                <th>Have it?</th>
+            </tr>
+        </table>
+
+        <div>
             
-        </h1>
-    </div>
+            <form class="add-tama-group" action="/tamas" method="post">
 
+            <label>
+                Brand
+                <select name="brand" required>
+                    <option value="Bandai">Bandai</option>
+                    <option value="Gyaoppi">Gyaoppi</option>
+                    <option value="Nano">Nano</option>
+                    <option value="Apollo">Apollo</option>
+                    <option value="Dinkie">Dinkie</option>
+                    <option value="Hitorikko">Hitorikko</option>
+                    <option value="MGA">MGA</option>
+                    <option value="Jonny">Jonny</option>
+                    <option value="Odd Pets">Odd Pets</option>
+                    <option value="Chinagotchi">Chinagotchi</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
+
+            <label>
+                Tama name
+            <input placeholder="Tama Name" name="tama_name" type="text" required>
+            </label>
+
+            <label>
+                Based on
+                <select name="based_on" required>
+                    <option value="P1/P2">P1/P2</option>
+                    <option value="Vintage">Vintage</option>
+                    <option value="OsutchiMesutchi">OsutchiMesutchi</option>
+                    <option value="Yasashii">Yasashii</option>
+                    <option value="Plus">Plus</option>
+                    <option value="Keitai">Keitai</option>
+                    <option value="EnTama">EnTama</option>
+                    <option value="FamiTama">FamiTama</option>
+                    <option value="Music Star">Music Star</option>
+                    <option value="Plus Color">Plus Color</option>
+                    <option value="iD">iD</option>
+                    <option value="Tama-Town Tama-Go">Tama-Town Tama-Go</option>
+                    <option value="id L">iD L</option>
+                    <option value="P's">P's</option>
+                    <option value="Friends">Friends</option>
+                    <option value="4U">4U</option>
+                    <option value="M!x">M!x</option>
+                    <option value="Meets">Meets</option>
+                    <option value="Nano">Nano</option>
+                    <option value="Chibi/Mini">Chibi/Mini</option>
+                    <option value="Tamago Chu">Tamago Chu</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
+
+
+            <label>
+                Toy Type
+                <select name="toy_type" required>
+                    <option value="Tamagotchi">Tamagotchi</option>
+                    <option value="Station">Station</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
+
+            <label>
+                Era
+                <select name="era" required>
+                    <option value="Vintage">Vintage</option>
+                    <option value="Connection">Connection</option>
+                    <option value="Color">Color</option>
+                    <option value="Genetics">Genetics</option>
+                </select>
+            </label>
+
+            <label>
+                Region
+                <select name="region" required>
+                    <option value="Japan">Japan</option>
+                    <option value="EU">Europe</option>
+                    <option value="USA">USA</option>
+                    <option value="Oceania">Oceania</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Korea">Korea</option>
+                    <option value="Eastern Europe">Eastern Europe</option>
+                </select>
+            </label>
+
+            <label>
+                Released on
+            <input type="date" name="release" required>
+            </label>
+
+            <label>
+                Have it?
+            <input type="checkbox" name="got_it">
+            </label>
+
+
+            <button id="add-tama-button">Add Tama Entry!</button>
+        </form>
+        </div>
+        <script src="/static/admin.js"></script>
+    </div>
 </body>
 
 </html>

@@ -4,7 +4,7 @@ const pgp = require("pg-promise")() // require('pg-promise') returns a function 
 const connection = {
     host: 'localhost', // 'localhost' is the default;
     port: 5432, // 5432 is the default;
-    database: 'tamatimeline',
+    database: 'tama_timeline',
     user: 'staenrey',
     password: '12345'
 };
