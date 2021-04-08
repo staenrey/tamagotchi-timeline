@@ -43,7 +43,6 @@ async function addTamaEntry(event){
 
     let newTama = await $.post("/tamas", tamaData)
     displayTama(newTama)
-    console.log(result)
 }
 
 getAndDisplayTamas()
